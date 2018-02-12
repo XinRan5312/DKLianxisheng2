@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/xinran/danke/mygithub/DKLianxisheng2/sharelib/build/intermediates/bundles/default/libs/SocialSDK_WeChat_Simplify.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="527fad71bb8cb5a759f0bb8658241c89ad15de8c">
+        <dex dex="/Users/xinran/danke/mygithub/DKLianxisheng2/app/build/intermediates/pre-dexed/debug/SocialSDK_WeChat_Simplify_2f41fef0ff820017154761cffc31f8a1fb41dc30.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/xinran/danke/mygithub/DKLianxisheng2/sharelib/build/intermediates/bundles/default/libs/SocialSDK_Sina_Simplify.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6c71d985a02f3d5c751f115ec51f89678f66023e">
+        <dex dex="/Users/xinran/danke/mygithub/DKLianxisheng2/app/build/intermediates/pre-dexed/debug/SocialSDK_Sina_Simplify_d1007c82a465b4ae70920ecf2c823b2a4bdbeb89.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/xinran/danke/mygithub/DKLianxisheng2/sharelib/build/intermediates/bundles/default/libs/SocialSDK_QQ_Simplify.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="979e86baea93da217d1d6dd8649d04a11624c183">
+        <dex dex="/Users/xinran/danke/mygithub/DKLianxisheng2/app/build/intermediates/pre-dexed/debug/SocialSDK_QQ_Simplify_6c8f3216633f2a8cbf1df2033e0ec0c4135a5003.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/xinran/danke/mygithub/DKLianxisheng2/sharelib/build/intermediates/bundles/default/libs/umeng_social_api.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7e8b160f0209f59f5ebc19831230fc6319279d85">
+        <dex dex="/Users/xinran/danke/mygithub/DKLianxisheng2/app/build/intermediates/pre-dexed/debug/umeng_social_api_e7efd271db3a036bd54046219101ee6ba2a8b436.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/xinran/danke/mygithub/DKLianxisheng2/sharelib/build/intermediates/bundles/default/libs/umeng_social_shareboard.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a97ded8866593114dc3d9ee137588da88c0b4ef2">
+        <dex dex="/Users/xinran/danke/mygithub/DKLianxisheng2/app/build/intermediates/pre-dexed/debug/umeng_social_shareboard_44981e37404e8ca4fb6e41cb7d9380dc0dbab0d7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/xinran/danke/mygithub/DKLianxisheng2/sharelib/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="436760f48fe450a06416fddd89b0deda53932214">
+        <dex dex="/Users/xinran/danke/mygithub/DKLianxisheng2/app/build/intermediates/pre-dexed/debug/classes_452ac604df583ed7cbccc9bdebde8800a73cbab5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/xinran/danke/mygithub/DKLianxisheng2/sharelib/build/intermediates/bundles/default/libs/umeng_shareboard_widget.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2c841f43ae9ef191e23aa31c7dbf44f4db734e21">
+        <dex dex="/Users/xinran/danke/mygithub/DKLianxisheng2/app/build/intermediates/pre-dexed/debug/umeng_shareboard_widget_c319f816042aea200989171f3d42ae536a0d12ae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/xinran/danke/mygithub/DKLianxisheng2/sharelib/build/intermediates/bundles/default/libs/umeng_social_tool.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8b17b7c71ac912fb54ad4df2c5d1f3b36ec95837">
+        <dex dex="/Users/xinran/danke/mygithub/DKLianxisheng2/app/build/intermediates/pre-dexed/debug/umeng_social_tool_2e1eb0b86a22b5419eaf15e6342872ea874b0c31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/xinran/danke/mygithub/DKLianxisheng2/sharelib/build/intermediates/bundles/default/libs/umeng_social_shareview.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b07185bfe3d026ec2755726d91863299f11d2f05">
+        <dex dex="/Users/xinran/danke/mygithub/DKLianxisheng2/app/build/intermediates/pre-dexed/debug/umeng_social_shareview_cd75d3520526dc551998f8a6836847292c0ece4c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/xinran/danke/mygithub/DKLianxisheng2/sharelib/build/intermediates/bundles/default/libs/umeng_social_net.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="74039060537a0e622d6572643494e39fb036ec4d">
+        <dex dex="/Users/xinran/danke/mygithub/DKLianxisheng2/app/build/intermediates/pre-dexed/debug/umeng_social_net_2f76865f7904eda43d5b9317e947926d069892a3.jar" />
+    </item>
+
+</items>
