@@ -28,7 +28,7 @@ public class QXShareUtil {
      * 分享图片
      * @param activity
      */
-    public static void shareWithMediaImg(final Activity activity, UMImage img) {
+    protected static void shareWithMediaImg(final Activity activity, UMImage img) {
         new ShareAction(activity)
                 .setDisplayList(SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE, SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.SINA)
                 .withMedia(img)
@@ -41,7 +41,7 @@ public class QXShareUtil {
      * @param activity 当前Activity
      * @param umWeb {@link UMWeb}
      */
-    public static void shareWeb(Activity activity, UMWeb umWeb) {
+    protected static void shareWeb(Activity activity, UMWeb umWeb) {
         share(activity, umWeb, null,null);
     }
 
@@ -51,7 +51,7 @@ public class QXShareUtil {
      * @param umWeb {@link UMWeb}
      * @param qxShareListener 自定义分享回调
      */
-    public static void shareWeb(final Activity activity, UMWeb umWeb, QXShareListener qxShareListener) {
+    protected static void shareWeb(final Activity activity, UMWeb umWeb, QXShareListener qxShareListener) {
         share(activity, umWeb, qxShareListener, null);
     }
     /**
@@ -60,7 +60,7 @@ public class QXShareUtil {
      * @param umWeb {@link UMWeb}
      * @param qxShareListener 自定义分享回调
      */
-    public static void shareWebWithCustomButton(final Activity activity, UMWeb umWeb, QXShareListener qxShareListener) {
+    protected static void shareWebWithCustomButton(final Activity activity, UMWeb umWeb, QXShareListener qxShareListener) {
         // 后两个参数是图标资源名称，如果资源名称改了一定要记得改
         QXShareButton imageButton = new QXShareButton(QXPlatformName.IMAGE, QX_SHARE_MEDIA.IMAGE, "umeng_socialize_image", "umeng_socialize_image");
         share(activity, umWeb, qxShareListener, imageButton);
@@ -71,7 +71,7 @@ public class QXShareUtil {
      * @param activity 当前Activity
      * @param umImage {@link UMImage}
      */
-    public static void shareImage(Activity activity, UMImage umImage) {
+    protected static void shareImage(Activity activity, UMImage umImage) {
         shareImage(activity, umImage, null);
     }
 
@@ -81,7 +81,7 @@ public class QXShareUtil {
      * @param umImage {@link UMImage}
      * @param qxShareListener 自定义分享回调
      */
-    public static void shareImage(Activity activity, UMImage umImage, QXShareListener qxShareListener) {
+    protected static void shareImage(Activity activity, UMImage umImage, QXShareListener qxShareListener) {
         share(activity, umImage, qxShareListener);
     }
 
@@ -148,7 +148,7 @@ public class QXShareUtil {
      * @return
      */
     @SuppressWarnings("WeakerAccess")
-    public static UMShareListener createUMShareListener(final Activity activity) {
+    protected static UMShareListener createUMShareListener(final Activity activity) {
         return new UMShareListener() {
             @Override
             public void onStart(SHARE_MEDIA platform) {
@@ -180,7 +180,7 @@ public class QXShareUtil {
      * @param activity 当前Activity
      * @param platform 分享平台
      */
-    public static boolean handlePlatformNotInstalled(Activity activity, SHARE_MEDIA platform) {
+    protected static boolean handlePlatformNotInstalled(Activity activity, SHARE_MEDIA platform) {
         if (!UMShareAPI.get(activity).isInstall(activity, platform)) {
             String appName = "";
             switch (platform) {
@@ -204,7 +204,7 @@ public class QXShareUtil {
      *
      * @param activity 当前Activity
      */
-    public static void deleteWeixinAuth(Activity activity) {
+    protected static void deleteWeixinAuth(Activity activity) {
         UMShareAPI.get(activity).deleteOauth(activity, SHARE_MEDIA.WEIXIN, new UMAuthListener() {
             @Override
             public void onStart(SHARE_MEDIA share_media) {
