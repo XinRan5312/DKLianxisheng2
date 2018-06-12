@@ -10,11 +10,12 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.blankj.utilcode.util.NetworkUtils;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
 import butterknife.ButterKnife;
 
-public abstract class ABaseActvity<P extends ABasePresenter> extends RxAppCompatActivity{
+public abstract class ABaseActvity<P extends ABasePresenter> extends RxAppCompatActivity implements IBaseView{
 
     protected P presenter;
 
@@ -51,14 +52,18 @@ public abstract class ABaseActvity<P extends ABasePresenter> extends RxAppCompat
     @Override
     protected void onResume() {
         super.onResume();
+        if (!NetworkUtils.isConnected()) {
+            showNoNet();
+        }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        if(presenter!=null){
+            presenter.destroyView();
+        }
     }
-
-
 
     protected abstract void initView();
     protected abstract void initPresenter(Intent intent);

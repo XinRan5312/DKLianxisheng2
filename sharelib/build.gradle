@@ -2,7 +2,6 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
@@ -22,13 +21,14 @@ android {
     lintOptions {
         abortOnError false
     }
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
-    testCompile 'junit:junit:4.12'
+    api "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    testImplementation 'junit:junit:4.12'
 }

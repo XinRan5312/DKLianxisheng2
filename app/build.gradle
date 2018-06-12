@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
@@ -22,47 +21,64 @@ android {
     lintOptions {
         abortOnError false
     }
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    compile "com.android.support:appcompat-v7:$supportLibraryVersion"
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
+    api "com.android.support:appcompat-v7:$supportLibraryVersion"
+    api 'com.android.support.constraint:constraint-layout:1.0.2'
+    testApi 'junit:junit:4.12'
 
-    compile "com.android.support:appcompat-v7:$supportLibraryVersion"
-    compile "com.android.support:recyclerview-v7:$supportLibraryVersion"
-    compile "com.android.support:design:$supportLibraryVersion"
+    api "com.android.support:appcompat-v7:$supportLibraryVersion"
+    api "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    api "com.android.support:design:$supportLibraryVersion"
     //butterknife
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.0'
-    compile 'com.jakewharton:butterknife:8.8.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.squareup.okhttp3:okhttp:3.2.0'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
-    compile 'com.squareup.okhttp:okhttp:2.7.0'
-    testCompile 'junit:junit:4.12'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    api 'com.jakewharton:butterknife:8.8.0'
+    api 'com.android.support.constraint:constraint-layout:1.0.2'
+    api 'com.squareup.okhttp3:okhttp:3.2.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+    api 'com.squareup.okhttp:okhttp:2.7.0'
+    testImplementation 'junit:junit:4.12'
+    api 'com.github.bumptech.glide:glide:3.7.0'
     //RX系列大家族套餐
-    compile "io.reactivex.rxjava2:rxjava:2.1.1"
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    compile 'com.squareup.retrofit2:retrofit:2.3.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    api "io.reactivex.rxjava2:rxjava:2.1.1"
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api 'com.squareup.retrofit2:retrofit:2.3.0'
+    api 'com.squareup.retrofit2:converter-gson:2.3.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
     //https://github.com/VictorAlbertos/RxCache
-    compile "com.github.VictorAlbertos.RxCache:runtime:1.8.3-2.x"
-    compile "io.reactivex.rxjava2:rxjava:2.1.6"
+    api "com.github.VictorAlbertos.RxCache:runtime:1.8.3-2.x"
+    api "io.reactivex.rxjava2:rxjava:2.1.6"
     // To use Gson
-    compile 'com.github.VictorAlbertos.Jolyglot:gson:0.0.4'
+    api 'com.github.VictorAlbertos.Jolyglot:gson:0.0.4'
 
     // To use Jackson
    // compile 'com.github.VictorAlbertos.Jolyglot:jackson:0.0.4'
 
     // To use Moshi
    // compile 'com.github.VictorAlbertos.Jolyglot:moshi:0.0.4'
-    compile project(':sharelib')
+
+    api 'com.blankj:utilcode:1.11.1'
+
+    //WorkMananger
+    //https://blog.csdn.net/guiying712/article/details/80386338
+    def work_version = "1.0.0-alpha01"
+
+    implementation "android.arch.work:work-runtime:$work_version" // use -ktx for Kotlin
+
+    // optional - Firebase JobDispatcher support
+    implementation "android.arch.work:work-firebase:$work_version"
+
+    // optional - Test helpers
+    androidTestImplementation "android.arch.work:work-testing:$work_version"
+
+
+    api project(':sharelib')
 }
